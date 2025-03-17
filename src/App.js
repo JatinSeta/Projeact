@@ -1,11 +1,18 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Event from "./Event/Event";
-import From from "./From/From";
+import SingInFrom from "./From/SingInFrom";
+import From from "./From/SingUpFrom";
+import SingUpFrom from "./From/SingUpFrom";
 
 function App() {
   return (
     <>
-<From/>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<SingInFrom/>} />
+      <Route path="/SingUp" element={<From/>} />
+    </Routes>
+    </BrowserRouter>
     </>
   );
 }
